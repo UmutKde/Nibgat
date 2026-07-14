@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DolandırBeni</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💸</text></svg>">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -13,27 +14,22 @@
       </div>
       <div class="header-links-container">
         <div class="header-linksbox-container">
-          <a href="#infos-container"
-            ><h4 class="header-links-text-container">Random Bilgiler</h4></a
-          >
+          <a href="#infos-container"><h4 class="header-links-text-container">Random Bilgiler</h4></a>
         </div>
         <div class="header-linksbox-container">
-          <a href="#contactus-container"
-            ><h4 class="header-links-text-container">Bize Ulaşın</h4></a
-          >
+          <a href="#footer-container"><h4 class="header-links-text-container">Bize Ulaşın</h4></a>
         </div>
       </div>
     </div>
-
     <div class="main-container">
       <div class="img-container">
         <img src="./img/resim.jxl" />
       </div>
       <div class="suprise-me-container">
-        <button class="suprise-me-button">Şaşırt Beni</button>
+        <button class="suprise-me-button" onclick="alert('Bu buton şuanlık inşaat aşamasındadır.Lütfen daha sonra tekrar basınız.')">Şaşırt Beni</button>
       </div>
     </div>
-    <div class="infos-container">
+    <div class="infos-container" id="infos-container">
       <div class="infos-grid-container">
         <div class="info-card">
           <div class="info-card-title">Zaman Eşittir Nakit</div>

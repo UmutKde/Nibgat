@@ -9,6 +9,11 @@ a {
     color: inherit;
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 .header-container {
     display: flex;
     height: 90px;
