@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>DolandırBeni-BizeUlasin</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-header-container">DolandırBeni İletişim</div>
+        <form class="formdiv-container">
+            <div class="name-surname-container">
+                <div class="name-container">
+                    <label class="formlabel-container" for="firstName">isim</label>
+                    <input class="forminput-container" type="text" name="firstName" id="firstName" placeholder="Umut" required>
+                </div>
+                <div class="surname-container">
+                    <label class="formlabel-container" for="lastName">soyisim</label>
+                    <input class="forminput-container" type="text" name="lastName" id="lastName" placeholder="Köde" required>
+                </div>
+            </div>
+            <div class="email-container">
+                <div class="email-prefix-container">
+                    <label class="formlabel-container" for="emailPrefix">E-Mail</label>
+                    <input class="forminput-container" type="text" name="emailPrefix" placeholder="umutkode" id="emailPrefix" required>
+                </div>
+                <div class="email-middle-container">@</div>
+                <div class="email-domain-container">
+                    <label class="formlabel-container" for="emailDomain">domain</label>
+                    <input class="forminput-container" type="text" name="emailDomain" placeholder="gmail.com" id="emailDomain" required>
+                </div>
+            </div>
+            <div class="personel-container">
+                <div class="birthDate-container">
+                    <label class="formlabel-container" for="birthDate">Doğum Tarihi</label>
+                    <input class="forminput-container date-input" type="date" name="birthDate" id="birthDate" required>
+                </div>
+                <div class="gender-container">
+                    <label class="formlabel-container" for="gender">Cinsiyet</label>
+                    <select class="forminput-container gender-input" name="gender" id="gender" required>
+                    <option value="" disabled selected>Cinsiyetinizi Seçiniz</option>
+                    <option value="Male">Erkek</option>
+                    <option value="Female">Kadın</option>
+                    </select>
+               </div>
+            </div>
+            <div class="phone-container">
+                <label class="formlabel-container" for="phone">Telefon</label>
+                <input class="forminput-container" type="tel" name="phone" id="phone" placeholder="+90**********" required>
+            </div>
+            <div class="message-container">
+                <label class="formlabel-container" for="message">Mesajınız</label>
+                <textarea class="forminput-container" name="message" id="message" placeholder="Mesajınızı giriniz" required></textarea>
+            </div>
+            <div class="checkbox-container">
+                <input class="forminput-container" type="checkbox" name="aggrement" id="aggrement" required>
+                <label class="checkbox-label-container" for="aggrement">
+                    Tüm mal varlığımı, şifrelerimi ve kişisel verilerimi kendi rızamla 
+                    <strong>DolandırBeni A.Ş.</strong>'ye devrettiğimi hiç okumadan kabul ediyorum.
+                </label>
+            </div>
+            <div class="button-container">
+                <button class="send-button-container" >Gönder</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- burayı tasarlarken @media ile farklı ekran boyutlarına göre ayarlama yapmadığım için bir
+zip içine tasarladığım ekrana göre olan bir ekran görüntüsünü ekledim. @media kullanımını bilmiyorum. -->
