@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&display=swap"
+      rel="stylesheet"
+    />
+    <title>Basic Calculater</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="screen-container">
+        <input class="screeninput-container" type="number" name="display" id="display">
+      </div>
+      <div class="buttons-container">
+        <div class="firstbuttonslayer-container">
+          <button class="onebutton-container" data-action="add">+</button>
+          <button class="onebutton-container" data-action="subtract">-</button>
+          <button class="onebutton-container" data-action="calculate">=</button>
+        </div>
+        <div class="secondbuttonslayer-container">
+          <button class="onebutton-container" data-action="divide">/</button>
+          <button class="onebutton-container" data-action="multiply">*</button>
+          <button class="onebutton-container" data-action="clear">AC</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

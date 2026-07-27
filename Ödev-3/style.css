@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEEBD0;
+}
+
+.main-container {
+    height: 80vh;
+    width: 100vh;
+    max-width: 1920px;
+    margin: 70px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #61707D;
+    border: 2px solid #101935;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.screen-container {
+    width: 90%;
+    height: 20%;
+    background-color: #A9D3FF;
+    border: 2px solid #101935;
+}
+
+.screeninput-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-family: "Slackey", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.buttons-container {
+    width: 90%;
+    height: 60%;
+    background-color: #A9D3FF;
+    border: 2px solid #101935;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.firstbuttonslayer-container {
+    width: 90%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.secondbuttonslayer-container {
+    width: 90%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.onebutton-container {
+    height: 90%;
+    width: 30%;
+    background-color: yellow;
+    border: 2px solid #101935;
+    font-family: "Slackey", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.onebutton-container:hover {
+    background-color: red;
+}
+
+.onebutton-container:active {
+    transform: translateY(-3px);
+}
