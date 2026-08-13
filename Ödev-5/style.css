@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0C1821;
+}
+
+.main-container {
+    height: 80vh;
+    width: 140vh;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto;
+    flex-direction: row;
+    gap: 3%;
+}
+
+.calculator-container {
+    height: 100%;
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    border: white 1px solid;
+}
+
+.numbers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 15%;
+    width: 100%;
+    gap: 5px;
+}
+
+.numberInput-container {
+    font-weight: 400;
+    font-size: 27px;
+    text-align: center;
+    color: #9DC3C2;
+    background-color: #324A5F;
+    border-bottom: white 1px solid;
+}
+
+.numberInput-container::placeholder {
+    color: #2F3437;
+}
+
+.result-container {
+    height: 15%;
+    width: 100%;
+    font-weight: 400;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9DC3C2;
+    border-bottom: white 1px solid;
+}
+
+.operation-container {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    border-bottom: white 1px solid;
+}
+
+.operationButton-container {
+    background-color: #324A5F;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #9DC3C2;
+    transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.operationButton-container:hover {
+    filter: brightness(1.9);
+}
+
+.operationButton-container:active {
+    transform: translateY(-8px);
+}
+
+.resultOperation-container {
+    width: 100%;
+    height: 20%;
+    font-weight: 400;
+    font-size: 27px;
+    text-align: center;
+    color: #9DC3C2;
+    background-color: #0C1821;
+    transition: filter 0.3s ease-in, transform 0.2s ease;
+}
+
+.resultOperation-container:hover {
+    filter: contrast(1.2);
+}
+
+.resultOperation-container:active {
+    transform: translateY(-8px);
+}

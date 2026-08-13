@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hesap Makinesi</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="calculator-container">
+        <div class="numbers-container">
+          <input class="numberInput-container" id="number1" type="number" placeholder="İlk Sayı"/>
+          <input class="numberInput-container" id="number2" type="number" placeholder="İkinci Sayı"/>
+        </div>
+        <div id="result" class="result-container">Sonuç</div>
+        <div class="operation-container">
+          <button data-operation class="operationButton-container">+</button>
+          <button data-operation class="operationButton-container">-</button>
+          <button data-operation class="operationButton-container">*</button>
+          <button data-operation class="operationButton-container">/</button>
+        </div>
+        <button data-equal class="resultOperation-container"> = </button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
