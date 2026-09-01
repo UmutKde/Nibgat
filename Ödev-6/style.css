@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    background-color: #F8F9FA;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.navbar-container {
+    grid-column: 1/13;
+    background-color: #F3F4F6;
+    border-bottom: 1px solid black;
+    height: 80px;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+}
+
+.navbar-container .logo-container {
+    grid-column: 1/3;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    font: bold;
+    color: #129490;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-container .search-container {
+    grid-column: 4/10;
+    height: 48px;
+    background-color: #D8D8F6;
+    border-radius: 8px;
+}
+
+.navbar-container .search-container::placeholder {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.navbar-container .addtoCart-container {
+    grid-column: 11/13;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: filter 0.3s ease-in, transform 0.2s ease;
+}
+
+.navbar-container .addtoCart-container:hover {
+    transform: translateY(-3px);
+}
+
+.offer-container {
+    margin-top: 48px;
+    grid-column: 4/10;
+    height: 300px;
+    background-color: #D8D8F6;
+    border-radius: 8px;
+}
+
+.offer-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.item-container {
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: subgrid;
+    margin-top: 48px;
+    align-items: start;
+}
+
+.categoryList-container {
+    grid-column: 1/4;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+.category-container {
+    height: 48px;
+    border-radius: 8px;
+    background-color: #D8D8F6;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    color: #494850;
+    transition: filter 0.3s ease-in, transform 0.2s ease;
+
+}
+
+.category-container.active {
+    font-weight: bold;
+    background-color: #CDCDF4;
+    color: #2C2C34;
+}
+
+.category-container:hover {
+    background-color: #CDCDF4;
+    transform: translateY(-5px);
+}
+
+.category-container:active {
+    box-shadow: 2px 2px 5px #CDCDF4;
+
+}
+
+.itemcard-container {
+    grid-column: 4/13;
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.card-container {
+    grid-column: span 3;
+    height: 360px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FDFDFD;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: filter 0.3s ease-in, transform 0.2s ease;
+}
+
+.card-container:hover {
+    background-color: #CDCDF4;
+    transform: translateY(-5px);
+}
+
+.cardImg-container {
+    height: 210px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+.cardImg-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border: none;
+    outline: none;
+    color: transparent;
+}
+
+.cardImg-container img[src=""],
+.cardImg-container img:not([src]) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cardBuy-container {
+    height: 48px;
+    background-color: #129490;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 8px 8px;
+    transition: filter 0.3s ease-in, transform 0.2s ease;
+}
+
+.cardBuy-container >a:hover {
+    color: #2C2C34;
+}
+
+.cardBuy-container:active {
+    transform: translateY(4px);
+}
+
+.cardName-container {
+    height: 102px;
+}
+
+.itemName-container {
+    font-size: 20px;
+    padding-top: 16px;
+    text-align: center;
+    color: #2C2C34;
+}
+
+.price-container {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 16px;
+    text-align: center;
+    color: #2C2C34;
+}
+
+.cardBuy-container>a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.detailImg-container {
+    grid-column: 3/8;
+    background-color: #F3F4F6;
+    height: 420px;
+    margin-top: 48px;
+    margin-right: 24px;
+}
+
+.detailImg-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border: none;
+    outline: none;
+    color: transparent;
+}
+
+.detailImg-container img[src=""],
+.detailImg-container img:not([src]) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.detailCard-container {
+    grid-column: 8/13;
+    background-color: #F3F4F6;
+    height: 168px;
+    margin-top: 48px;
+    border-radius: 8px;
+}
+
+.detailWrapper-container {
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.detail-container {
+    grid-column: 3/11;
+    background-color: #F3F4F6;
+    height: 420px;
+    margin-top: 48px;
+
+}
+
+.detailCardName-container {
+    font-size: 24px;
+    padding-top: 16px;
+    text-align: center;
+    color: #2C2C34;
+}
+
+.detail-container>h2 {
+    color: #2C2C34;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-align: left;
+    padding-top: 16px;
+}
+
+.detail-container>p {
+    font-size: 18px;
+    color: #2C2C34;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: left;
+    padding-top: 16px;
+}
+
+.detailCardPrice-container {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 16px;
+    text-align: center;
+    color: #2C2C34;
+}
+
+.detailCardBuy-container {
+    height: 48px;
+    background-color: #129490;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 8px 8px;
+    margin-top: 16px;
+    transition: filter 0.3s ease-in, transform 0.2s ease;
+}
+
+.detailCardBuy-container >a:hover {
+    color: #2C2C34;
+}
+
+.detailCardBuy-container:active {
+    transform: translateY(4px);
+}
+
+.detailCardBuy-container>a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.cartOverlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cartModal-container {
+    background-color: #FDFDFD;
+    width: 500px;
+    min-height: 300px;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartHeader-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.close-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cartItems-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.cartItems-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
