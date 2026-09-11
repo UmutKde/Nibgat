@@ -46,11 +46,8 @@ body {
     height: 48px;
     background-color: #D8D8F6;
     border-radius: 8px;
-}
-
-.navbar-container .search-container::placeholder {
-    padding: 20px;
     font-size: 14px;
+    padding: 20px;
 }
 
 .navbar-container .addtoCart-container {

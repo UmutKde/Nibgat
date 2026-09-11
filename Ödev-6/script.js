@@ -1,7 +1,15 @@
 const items = [];
 const categoryContainer = document.querySelector('.categoryList-container');
 const itemContainer = document.querySelector('.itemcard-container');
+const filterContainer = document.querySelector('.search-container');
 
+const debouncedSearch = debounce(searchItem, 300);
+
+filterContainer.addEventListener("input", e => {
+    const filterName = e.target.value;
+
+    debouncedSearch(filterName);
+})
 
 fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
@@ -61,4 +69,25 @@ function UpdateItemCard(item) {
             </div>`;
         itemContainer.innerHTML += cardHTML;
     });
+}
+
+function searchItem(filter) {
+    const searchText = filter.toLowerCase().trim().split(' ').filter(Boolean);
+
+    const filteredItems = items.filter(x => {
+        const title = x.title.toLowerCase();
+        return searchText.every(word => title.includes(word));
+    });
+    UpdateItemCard(filteredItems);
+}
+
+function debounce(func, delay = 300) {
+    let timeout
+
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            func(...args);
+        }, delay)
+    }
 }
